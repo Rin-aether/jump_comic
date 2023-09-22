@@ -1,0 +1,834 @@
+@charset "UTF-8";
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+ul {
+  list-style: none;
+}
+a {
+	text-decoration:none;
+}
+a:hover img {
+	opacity: 0.8;
+}
+
+.all-wrap{
+  width:100vw;
+  height: auto;
+  display: flex;
+}
+
+.header{
+	flex: 0 0 170px;
+	background:linear-gradient(#FFF 1%,#c70809,#c70809 100%);
+	border-right: solid 1px rgb(255,255,255,.7);
+}
+.main{
+	flex: 1 1 auto;
+	background-color: #FCF2F2;
+}
+.header__logo{
+	width:100%;
+}
+.header__img{
+	width: 160px;
+	margin-left: 2px;
+}
+.menu{
+	height: 22vh;
+	margin-top: 59vh;
+	margin-left: 8px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+  justify-content: space-between;
+	position: fixed;
+}
+.menu__btn{
+	color: #FFF;
+  font-weight: bold;
+  text-decoration: none;
+	font-size: 20px;
+	width: 150px;
+	padding: 0 0 2px 0;
+	position: relative;
+  display:inline-block;
+	outline: none;
+}
+.menu__btn:hover{
+	color: #FFFF0F;
+	text-shadow: 0 0 1px #fff;
+	opacity: 0.9;
+}
+.menu__btn::before,
+.menu__btn::after{
+	content:'';
+	position:absolute;
+	z-index:1;
+	bottom:0;
+	left:0;
+	background:rgb(255,255,255,.8);
+	width:100%;
+	height: 2px;
+	transition:all 0.3s ease-in-out;
+}
+.menu__btn::after{
+	width:0;
+	background:#FFFF4F;
+	box-shadow: 0 0 5px 1px #fff;
+	opacity: .9;
+}
+.menu__btn:hover::after {
+	width:100%;
+}
+/*//////// スライドショー///////////*/
+.slider{
+    width:88.6vw;
+		height: 25vw;
+		margin: 3vw 0 3vw 0;
+		background-color: rgba(0,0,0,0.2);
+}
+.slider__img{
+    width:48vw;
+    height:auto;
+		margin-top: .7vw;
+		box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
+		border: solid 2px rgba(19,200,241,0.5);
+		border-radius: 6px;
+}
+.slider .slick-slide {
+	transform: scale(0.8);
+	transition: all .5s;
+	opacity: 0.5;
+}
+.slider .slick-slide.slick-center{
+	transform: scale(1);
+	opacity: 1;
+}
+/*////////         ///////////*/
+.text_wrap{
+	text-align: center;
+}
+.text-wrap__main{
+	margin-top: 5vh;
+  display: flex;
+  align-items: center;
+	font-size: 2.6vw;
+	font-weight: bold;
+	line-height: 2;
+	letter-spacing: .2vw;
+	color:rgba(226,36,0,0.7);
+}
+.text-wrap__main:before,
+.text-wrap__main:after {
+  content: "";
+  height: 1px;
+  flex-grow: .9;
+  background-color: #E22400;
+}
+.text-wrap__main:before {
+    margin-right: 1rem;
+		background: linear-gradient(-90deg, #E22400, transparent);
+}
+.text-wrap__main:after {
+    margin-left: 1rem;
+		background: linear-gradient(90deg, #E22400, transparent);
+}
+.text-wrap__sub{
+	text-align: center;
+	font-size: .9vw;
+	margin-top: -2vh;
+	font-weight: bold;
+	line-height: 2;
+	letter-spacing: .2vw;
+	color: rgba(226,36,0,0.6);
+}
+/*//////// 商品紹介 ///////////*/
+.goods{
+	width: 63vw;
+	height: auto;
+	margin: 0 auto;
+	padding-top: 3vh;
+	display: flex;
+	justify-content: space-around;
+	overflow: visible;
+}
+.goods__item{
+	width: 20vw;
+	padding: .5vw;
+	background-color: #FFF;
+	box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
+	border: solid 2px rgba(226,36,0,0.7);
+	text-align: center;
+	border-radius: 2%;
+}
+.goods__ribbon{
+	width: 16vw;
+}
+.goods__img{
+	width: 15vw;
+}
+.goods__text{
+	font-size: 1vw;
+	width: 15vw;
+	margin: 0 auto;
+	font-weight: bold;
+	color: #333;
+}
+
+.goods2{
+	width: 63vw;
+	margin: 0  auto 4vh;
+	padding-top: 2vh;
+	display: flex;
+	justify-content: space-around;
+	overflow: visible;
+}
+.goods2__item{
+	width: 11.8vw;
+	padding: .3vw;
+	background-color: #FFF;
+	box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
+	border: solid 1.9px rgba(226,36,0,0.7);
+	text-align: center;
+	border-radius: 2%;
+	position: relative;
+	overflow: visible;
+}
+.goods2__ribbon{
+  position: absolute;
+	top: -2px;
+	left: -2px;
+	padding: 0px 2px;
+	padding-right: 2vw;
+	letter-spacing: 0.1px;
+	color: #ffffff;
+	background: linear-gradient(-45deg,transparent,transparent 25%,rgba(51,51,51,0.9) 0%,rgba(51,51,51,0.9));
+}
+.goods2__ribbon h1{
+  font-size: .9vw;
+  font-weight: bold;
+	margin-left: 2px;
+}
+.goods2__img{
+	width: 9vw;
+	height: auto;
+	margin-top: 2vh;
+}
+.goods2__text{
+	font-size: 0.7vw;
+	width: 9vw;
+	margin: 0 auto;
+	font-weight: bold;
+	color: #333;
+}
+.goods__item:hover{
+	transform: scale(.99);
+	cursor: pointer;
+}
+.goods2__item:hover{
+	transform: scale(.98);
+	cursor: pointer;
+}
+/*//////// news  ///////////*/
+.news{
+	width: 68vw;
+	height: 40vw;
+	margin: 5vh auto 0;
+}
+.news__subtitle{
+	width: 8vw;
+  padding: 0.4vw;
+  color: #fff;
+	font-size: 1.2vw;
+	font-weight: bold;
+  background: #2CA507;
+  -webkit-box-shadow: 5px 5px 0 #117504;
+  box-shadow: 5px 5px 0 #117504;
+	margin: -2.1vw 0 1.6vw -2.1vw;
+}
+.news__main{
+	width: 38vw;
+	padding:2vw;
+	background-color: #FFF;
+	box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
+	border: solid 2px rgba(44,165,7,0.7);
+	border-radius: 0 5px 5px 5px;
+	overflow: visible;
+}
+.news__day{
+	display:block;
+	font-size:0.8rem;
+	font-weight: bold;
+	margin-right:10px;
+	color:#777;
+	padding:3px 0 2px 0;
+}
+.news__title{
+	padding: 0.46vw;
+	font-size: 1vw;
+	color: #4D4D4D;
+	border-bottom:1px dashed rgba(51,51,51,.9);
+	font-weight: bold;
+}
+.news__title:hover{
+	color:rgba(226,36,0,0.9);
+	cursor: pointer;
+}
+.twitter{
+	float: right;
+	margin-top: -28.7vw;
+	margin-right: 2vw;
+	background-color: #FFF;
+	box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
+	border: solid 2px rgba(0,172,238,0.7);
+	border-radius: 0 5px 5px 5px;
+	overflow: visible;
+}
+.twitter__subtitle{
+  width: 8vw;
+  padding: 0.4vw;
+	color: #fff;
+	font-size: 1.2vw;
+	font-weight: bold;
+	background: #00acee;
+	-webkit-box-shadow: 5px 5px 0 #008abe;
+	box-shadow: 5px 5px 0 #008abe;
+	margin-left: -2px;
+}
+.twitter-timeline{
+	margin-top: 5px;
+}
+/*//////// コミックス///////////*/
+.comics-page{
+	width:88.8vw;
+	height: 25.1vw;
+	margin: 3vw 0 3vw 0;
+	background-color: rgba(0,0,0,0.1);
+	overflow: hidden;
+}
+.comics-page__img{
+	height: 24.5vw;
+	margin: .3vw 0 0 3vw;
+	border-radius: 2px;
+	border: solid 2px rgba(255,255,79,0.8);
+}
+.comics-page__sub{
+	float: right;
+	width: 26vw;
+	height: 24.5vw;
+	margin-top: -25vw;
+	margin-right: 2vw;
+	background-color: rgba(255,255,255,0.9);
+	border: solid 2px rgba(226,36,0,0.5);
+	border-radius: 0 3px 3px 3px;
+	overflow: visible;
+	text-align: center;
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+}
+.comics-page__sub h3{
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	padding: 0px 8px;
+	padding-right: 4vw;
+	letter-spacing: 0.1px;
+	color: #ffffff;
+	background: linear-gradient(-45deg,transparent,transparent 25%,rgba(226,36,0,0.9) 0%,rgba(226,36,0,0.9));
+}
+.comics-page__jump{
+	width: 12vw;
+	margin:4vw 0 0 0;
+}
+.jump,.giga{
+	width: 10vw;
+	box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
+	border: solid 2px rgba(226,36,0,0.7);
+	border-radius: 2px;
+}
+.comics-page__jump p{
+	font-size: 1vw;
+	width: 9vw;
+	margin: 0 auto;
+	font-weight: bold;
+	color: #4D4D4D;
+}
+.comics-page__jump:hover{
+	opacity: .8;
+	transform: scale(.99);
+}
+.comics-page__img:hover{
+		opacity: .9;
+}
+/*///  */
+.btn_wrap{
+	width: 42vw;
+	margin: 2vw auto 0;
+	display: flex;
+	justify-content: space-around;
+}
+.chg_btn button{
+	width: 12vw;
+	background-color: rgba(255,255,255,0.7);
+	border-radius: 30px;
+	border: solid 2px rgba(255,99,99,0.8);
+	padding: 1vw;
+	margin: 2vw;
+	font-size: 1.2vw;
+	font-weight: bold;
+	color: #444;
+	transition: all .3s ease-out;
+	letter-spacing: .5px;
+}
+.chg_btn button:hover{
+  transform: scale(1.05);
+	box-shadow: 0 .8vw .8vw rgba(128,128,128,0.2);
+	border-radius: 30px;
+}
+/* クラス追加 今表示してるほう*/
+.add button{
+  align-self: center;
+	color: #FFF;
+	background-color: rgba(226,36,0,0.7);
+	border: solid 2px rgba(255,255,15,0.9);
+	border-radius: 30px;
+}
+
+.comics{
+	width: 62vw;
+	margin: 0 auto;
+	padding-bottom: 8vw;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.comics_item{
+	width: 14vw;
+	opacity: 0;
+}
+.comics_item img{
+	width: 12.9vw;
+	height: 19.6vw;
+	margin-top: 3vw;
+	box-shadow:  1px 1px 1px 1px rgba(0,0,0,0.3);
+	border: solid 1.8px  rgba(226,36,0,0.7);
+	border-radius: 3px;
+	position: relative;
+}
+.comics_item h3 {
+	font-size: 1vw;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+	color: #333;
+}
+.comics_item p {
+	font-size: 0.8vw;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+	color: #333;
+}
+.comics_item:hover{
+	opacity: .8 !important;
+	transform: scale(1.03) !important;
+}
+.fadeUp {
+animation-name:fadeUpAnime;
+animation-duration:0.5s;
+animation-fill-mode:forwards;
+opacity: 0;
+}
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+	transform: translateY(110px);
+  }
+
+  to {
+    opacity: 1;
+	transform: translateY(0);
+  }
+}
+/*////// ショップ///////// */
+.shops{
+	width: 50vw;
+	margin: 1vw auto 0;
+	display: flex;
+	justify-content: space-around;
+}
+.shops_btn button{
+	width: 10vw;
+	background-color: rgba(255,255,255,0.7);
+	border-radius: 30px;
+	border: solid 2px rgba(255,99,99,0.8);
+	padding: 1vw;
+	margin: 2vw;
+	font-size: 1.2vw;
+	font-weight: bold;
+	color: #444;
+	transition: all .3s ease-out;
+	letter-spacing: .5px;
+}
+.shops_btn button:hover{
+  transform: scale(1.02);
+	box-shadow: 0 .5vw .5vw rgba(128,128,128,0.2);
+	border-radius: 30px;
+}
+/* クラス追加 今表示してるほう*/
+.now button{
+  align-self: center;
+	color: #FFF;
+	background-color: rgba(226,36,0,0.7);
+	border: solid 2px rgba(255,255,15,0.9);
+	border-radius: 30px;
+}
+
+.all-info{
+	width: 88.6vw;
+	margin: 2vw 0 3vw 0;
+}
+.info{
+	width: 70vw;
+	height: 18vw;
+	margin: 0 auto;
+	border-radius: 5px;
+}
+.title-wrap{
+	text-align: center;
+}
+.info__title{
+  display: flex;
+  align-items: center;
+	font-size: 1.9vw;
+	font-weight: bold;
+	line-height: 2;
+	letter-spacing: .2vw;
+	color: rgb(255,99,99);
+	margin-bottom: 3px;
+}
+.info__title:after {
+  content: "";
+  height: 1px;
+  flex-grow: .85;
+  background-color: #FF6363;
+}
+.info__title:before{
+  content: "";
+  height: 1px;
+  flex-grow: .15;
+  background-color: #FF6363;
+}
+.info__title:before {
+  margin-right: 1rem;
+	background: linear-gradient(-90deg, #FF6363, transparent);
+}
+.info__title:after {
+    margin-left: 1rem;
+		background: linear-gradient(90deg,#FF6363, transparent);
+}
+dt{
+	float: left;
+	clear: left;
+	font-size: 1.1vw;
+	width: 10vw;
+	padding: 1.1vw 0 0 1vw;
+	font-weight: bold;
+	color:rgba(68,68,68,0.9);
+}
+dd{
+	float: left;
+	font-size: 1.1vw;
+	padding: 1.1vw 0 0 1vw;
+	font-weight: bold;
+	color: rgba(68,68,68,0.9);
+}
+.info_map{
+	width: 14vw;
+	float: right;
+	opacity: .9;
+	border-radius: 2%;
+	margin: -10vw 8vw 0 0;
+}
+/* ///////////////////////// */
+.word-area{
+	margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+}
+span{
+	color: #FF6363;
+}
+.word{
+	width: 53vw;
+	font-size: 1.8vw;
+	margin: 4vw 3vw 0 2vw;
+	padding: 2vw;
+	text-align: center;
+	background: rgb(255, 255, 255,.9);
+	font-weight: bold;
+	line-height: 2.2;
+	color: #4D4D4D;
+	position: relative;
+  border-radius: 10px;
+	overflow: visible;
+	box-shadow: 0 .5vw .5vw rgba(128,128,128,0.2);
+}
+
+.word::before{
+  content:'';
+  position:absolute;
+	display: block;
+	top: 60%;
+  margin: -1vw 0 0 51vw;
+  border: 1vw solid transparent;
+  border-left: 2vw solid rgb(255,255,255);
+}
+.unesan{
+  position: relative;
+}
+.unesan img{
+	width: 21vw;
+  animation: updown 1.5s linear 0s infinite alternate none running;
+}
+.nameP{
+  display: none;
+}
+.nameP:after{
+  position: absolute;
+  transform: skewX(-15deg);
+	bottom: 3.1vh;
+	right: 3.7vw;
+  content: "- ウーネラス -";
+  background:linear-gradient(to right,#1E90FF,#1EF0FF);
+  border-radius:2px;
+  padding: 1px 12px;
+  border: 3px double #fff;
+  font-size: 1.4vw;
+  font-weight: bold;
+  color: #fff;
+}
+
+@keyframes updown {
+  0% {
+    transform: translate(.2px,-3.6px);
+  }
+  100% {
+    transform: translate(-1px,1px);
+  }
+}
+.ugoku{
+	width: 65vw;
+	height: 98vh;
+	margin: 0 auto;
+	text-align: center;
+}
+.ugoku img{
+		width: 38vw;
+		margin-top: 5vw;
+}
+.omikuzi{
+	width: 65vw;
+	height: 31.4vw;
+	margin: -5vw auto 0;
+	text-align: center;
+	padding: 1vw 8vw 3vw 0;
+	overflow: visible;
+}
+.omikuzi img{
+	margin: 0 auto;
+}
+/* ////////////// */
+.kuzi-wrap{
+	display: flex;
+	justify-content: space-around;
+}
+.kuzi img{
+	margin-bottom: 2vw;
+	transform-origin: center bottom;
+	animation: yura 2s linear infinite;
+}
+@keyframes yura {
+  0%,100%{
+    transform: rotate(3deg);
+  }
+  50%{
+    transform: rotate(-3deg);
+  }
+}
+.cover{
+	padding: 1vw;
+}
+.cover img{
+	width: 15.5vw;
+	box-shadow:  2px 2px 2px 2px rgba(0,0,0,0.3);
+	border: solid 2px  rgba(255,255,15,0.4);
+	border-radius: 5px;
+	}
+.story{
+	width: 36vw;
+	margin-top: 2vw;
+	text-align: center;
+}
+.book-title{
+	display: flex;
+	align-items: center;
+	font-size: 1.8vw;
+	font-weight: bold;
+	line-height: 2;
+  letter-spacing: .2vw;
+	color: rgba(255,99,99,.9);
+	margin-bottom: 3px;
+}
+.book-title:before,
+.book-title:after {
+	content: "";
+	height: 1px;
+	flex-grow: .5;
+	background-color: #FF6363;
+	}
+.book-title:before {
+	margin-right: 1rem;
+  background: linear-gradient(-90deg, #FF6363, transparent);
+}
+.book-title:after {
+	margin-left: 1rem;
+  background: linear-gradient(90deg,#FF6363, transparent);
+}
+.book-story{
+	width: 32vw;
+	margin: 0 auto;
+	font-size: 1.15vw;
+	font-weight: bold;
+	line-height: 1.8;
+	color:rgba(68,68,68,0.9);
+}
+/*  */
+.info-btn{
+	width: 27vw;
+  margin: 4vw auto 0;
+	font-weight: bold;
+	font-size: 1.6vw;
+	color:rgba(255,99,99,.9);
+	position: relative;
+	overflow: visible;
+}
+.info-btn::before{
+  content: '';
+  position: absolute;
+  bottom:-6px;
+  left:10%;
+  width: 85%;
+  height: 2px;
+	background:#FF6363;
+  transition: all .2s;
+}
+.info-btn::after{
+  content: '';
+  position: absolute;
+  bottom:-1px;
+  right:5%;
+  width: 15px;
+  height:2px;
+	background:#FF6363;
+  transform: rotate(35deg);
+  transition: all  .3s ease;
+}
+.info-btn:hover{
+    cursor: pointer;
+}
+.info-btn:hover::before{
+    left:11%;
+}
+.info-btn:hover::after{
+    right:-6%;
+}
+/* ////////////// */
+.kuzi-btn{
+	text-align: center;
+	padding-right: 8vw;
+}
+.kuzi-btn button{
+	width: 20vw;
+	background:rgba(226,36,0,0.9);
+	border-radius: 20px;
+	border: solid 2px rgba(255,255,79,0.8);
+	padding: 1.4vw;
+	margin: 2vw;
+	font-size: 1.7vw;
+	font-weight: bold;
+	color: #fff;
+	letter-spacing: .5px;
+}
+.kuzi-btn button:hover{
+  transform: scale(1.05);
+}
+/*//////// フッター ///////////*/
+.footer{
+	height: 5.5vw;
+	padding: 1.2vw;
+	border-top: solid 2px rgb(69,45,45,.6);
+	text-align: center;
+}
+.footer__page-top a{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	background:rgba(226,36,0,0.9);
+	border: solid 2px rgba(255,255,79,0.8);
+	border-radius: 5px;
+	width: 60px;
+	height: 60px;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size:1vw;
+	transition:all 0.3s;
+}
+.footer__page-top a:hover{
+	opacity: .8;
+}
+.footer__page-top{
+	position: fixed;
+	right: 10px;
+	bottom:10px;
+	z-index: 2;
+    /*はじめは非表示*/
+	opacity: 0;
+	transform: translateX(100px);
+}
+.footer__page-top.LeftMove{
+	animation: LeftAnime 0.5s forwards;
+}
+
+@keyframes LeftAnime{
+  from {
+    opacity: 0;
+	transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+	transform: translateX(0);
+  }
+}
+.footer__page-top.RightMove{
+	animation: RightAnime 0.5s forwards;
+}
+@keyframes RightAnime{
+  from {
+  	opacity: 1;
+	transform: translateX(0);
+  }
+  to {
+  	opacity: 1;
+	transform: translateX(100px);
+  }
+}
